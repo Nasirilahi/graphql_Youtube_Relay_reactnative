@@ -1,31 +1,3 @@
-// import express from 'express';
-// import path from 'path';
-// import GraphQLHTTP from 'express-graphql';
-// import schema from './schema/schema.js';
-
-// const app = express();
-// const PORT = 8080;
-
-// function getSchema() {
-//   if (!IS_DEVELOPMENT) {
-//     return schema;
-//   }
-
-//   delete require.cache[require.resolve('./schema/schema.js')];
-//   return require('./schema/schema.js').schema;
-// }
-
-// app.use("/graphql",GraphQLHTTP({
-//     schema,
-//     graphiql:true,
-// }));
-
-// app.use('/', (req, res) => res.redirect('/graphql'));
-
-// app.listen(PORT, ()=> {
-//     console.log("server is running on http://localhost:",PORT);
-// })
-
 import path from 'path';
 import express from 'express';
 import graphQLHTTP from 'express-graphql';
