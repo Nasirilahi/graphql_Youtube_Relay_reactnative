@@ -1,0 +1,64 @@
+schema {
+  query: Query
+}
+
+type id {
+  videoId: String
+  kind: String
+}
+
+type ItemList {
+  kind: String
+  etag: String
+  id: id
+  snippet: snippet
+  statistics: [statistics]
+}
+
+type PageInfo {
+  totalResults: Int
+  resultsPerPage: Int
+}
+
+type Query {
+  youtube(term: String!): Youtube
+}
+
+type snippet {
+  title: String
+  channelId: String
+  channelTitle: String
+  description: String
+  liveBroadcastContent: String
+  publishedAt: String
+  thumbnails: thumbnails
+}
+
+type statistics {
+  viewCount: String
+  likeCount: String
+  dislikeCount: String
+  commentCount: String
+  favoriteCount: String
+}
+
+type thumbnails {
+  default: url
+  high: url
+  medium: url
+}
+
+type url {
+  url: String
+  width: Int
+  height: Int
+}
+
+type Youtube {
+  kind: String
+  etag: String
+  nextPageToken: String
+  regionCode: String
+  pageInfo: PageInfo
+  items: [ItemList]
+}
