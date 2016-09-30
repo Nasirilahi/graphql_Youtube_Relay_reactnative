@@ -30,34 +30,56 @@ Review the Docs in the upper right hand corner to view more about the fields ava
  ere is a sample of all the available fields for the youtube search API.
 
 ```
-query {
-  youtube(term:"surfboards") {
-    kind,
-		etag,
-    id {
-      videoId,
+{
+  youtube(term:"good morning"){
+   kind
+   etag
+    nextPageToken
+    regionCode
+    pageInfo{
+      totalResults
+      resultsPerPage
+    }
+    items{
       kind
-    },
-    snippet {
-      title
-      channelId,
-      channelTitle,
-      description,
-      liveBroadcastContent,
-      publishedAt
-      thumbnails {
-      	default {
-        	url
-      	},
-      	medium {
-        	url
-      	},
-      	high {
-        	url
-      	}
+      etag
+      id {
+        videoId
+        kind
+      }
+      snippet{
+       title
+        channelId
+        channelTitle
+        description
+        liveBroadcastContent
+        publishedAt
+        thumbnails{
+          default{
+            url
+            width
+            height
+          }
+          medium{
+             url
+            width
+            height
+          }
+          high{
+              url
+            width
+            height
+          }
+        }
+      }
+      statistics{
+        viewCount
+        likeCount
+        dislikeCount
+        commentCount
+        favoriteCount
+      }
     }
-    }
-
   }
 }
 # the sample app I plan will not require half of those fields, maybe just 4-5 of them!
