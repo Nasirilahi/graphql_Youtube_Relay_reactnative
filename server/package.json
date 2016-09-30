@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "babel-node ./server/server.js",
-    "update-schema": "babel-node ./server/schema/updateSchema.js",
+    "start": "babel-node ./server.js",
+    "update-schema": "babel-node ./schema/updateSchema.js",
     "test": "jest",
     "lint": "eslint ."
   },
