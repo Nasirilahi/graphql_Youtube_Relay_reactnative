@@ -17,6 +17,12 @@ Install all the dependencies.
 npm install 
 ....
 
+Run one more command to make it compatible with es6 features :- 
+
+............................................
+echo '{ "presets": ["es2015"] }' > .babelrc
+............................................
+
 ## IMPORTANT
 
 We need to provide Youtube API key to have this work.
